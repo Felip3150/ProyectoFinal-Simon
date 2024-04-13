@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pizzería</title>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+
+  <body>
+    <h1 class="ladoIzquierdo">Armador de Pizzas</h1>
+    <section class="ladoIzquierdo">
+      <h3>Selección rápida</h3>
+      <div id="pizzasYaArmadas">
+        <button id="botonRepetirPedido">Repetir último pedido</button>
+      </div>
+    </section>
+    <section class="ladoIzquierdo">
+      <div>
+        <h3>¿Cómo querés tu pizza?</h3>
+        <button id="botonPiedra">A la Piedra</button>
+        <button id="botonHorno">Al horno</button>
+      </div>
+      <div>
+        <h3>¿Qué tópings le agregamos?</h3>
+        <div id="divDeCadaTopping">
+        </div>
+      <div>
+        <h3>¿En cuántas porciones cortamos la pizza?</h3>
+        <div id="botonesPorciones">
+          <button id="botonQuitarPorciones">-</button>
+          <p id="parrafoPorciones">6</p>
+          <button id="botonAgregarPorciones">+</button>
+        </div>
+      </div>
+    </section>
+    <section class="ladoIzquierdo">
+      <div>
+        <h3>¿Te enviamos la pizza a domicilio?</h3>
+        <button id="botonEnvioDomicilio">Envio a domicilio</button>
+        <button id="botonRetiroLocal">Retiro en el local</button>
+        <div id="divEnvioORetiro"></div>
+        <div class="invisible" id="divDireccion">
+          <label for="inputDireccionBarrio">Barrio: <input id="inputDireccionBarrio" type="text" placeholder="Rosario Centro"/></label>
+          <label for="inputDireccionCalle">Dirección: <input id="inputDireccionCalle" type="text"  placeholder="Santa Fe 581"/></label>
+          <button id="botonAceptarDireccion">Guardar</button>
+        </div>
+      </div>
+      <div>
+        <h3>Pago</h3>
+        <div id="divMonedas">
+          <p>¿Con qué vas a pagar?</p>
+        </div>
+        <div>
+          <p>¿Tenés un código de descuento?</p>
+          <label for="inputCodigoDescuento">Código: <input id="inputCodigoDescuento" type="text"/></label>
+          <button id="botonCodigoDescuento">Validar</button>
+        </div>
+      </div>
+    </section>
+    <section id="ladoDerecho">
+      <div id="resumenPedido">
+        <h2>Resumen de tu pedido</h2>
+        <p id="parrafoCoccion"></p>
+        <p id="parrafoAceitunas"></p>
+      </div>
+      <div id="divTotal">
+        <h4 id="parrafoSubtotal"></h4>
+        <h4 id="parrafoDescuentos"></h4>
+        <h3 id="parrafoTotal"></h3>
+        <h3 id="parrafoMonedaExtranjera"></h3>
+      </div>
+      <div id="divFinalizar">
+        <button id="botonFinalizar">Finalizar</button>
+        <div id="divErrores" class="invisible">
+          <p id="parrafoErrorCoccion">No seleccionaste la cocción.</p>
+          <p id="parrafoErrorEnvio">No elegiste el envío</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
